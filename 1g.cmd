@@ -78,9 +78,9 @@ set "aria2c_url=https://gitee.com/pda8888/diy/raw/master/bin/aria2c.exe"
 set "logfile=%CloudSysFolder%\cloudsysdown.log"
 
 REM 定义下载源数组
-set "cloudsys[1]=https://o.8da.com.cn:15900/d/zdh/CloudSys/CloudSys-3.3.0.6.exe"
-set "cloudsys[2]=https://o.8da.com.cn:15900/d/wopan/diy/drivers/cloudsys/CloudSys-3.3.0.6.exe"
-set "cloudsys[3]=https://o.8da.com.cn:15900/d/189/13983650000/family/diy/drivers/CloudSys/CloudSys-3.3.0.6.exe"
+set "cloudsys[1]=https://o.8da.com.cn:15900/d/zdh/CloudSys/CloudSys-3.3.2.0.exe"
+set "cloudsys[2]=https://o.8da.com.cn:15900/d/wopan/diy/drivers/cloudsys/CloudSys-3.3.2.0.exe"
+set "cloudsys[3]=https://o.8da.com.cn:15900/d/189/13983650000/family/diy/drivers/CloudSys/CloudSys-3.3.2.0.exe"
 set "cloudsysCount=3"
 
 title BlueShift 云端系统恢复 v%SCRIPT_VERSION%
@@ -151,7 +151,8 @@ if %errorlevel% equ 0 (
         echo [成功] 准备启动安装程序...
         timeout /t 2 /nobreak >nul
         find "113.44.45.137" "%windir%\system32\drivers\etc\hosts">nul || (echo;&echo;&echo 113.44.45.137 pc.8da.com.cn&echo 113.44.45.137 o.8da.com.cn)>>"%windir%\system32\drivers\etc\hosts"
-        start "" "%CloudSysFolder%\CloudSys.exe" -j https://gitee.com/pda8888/diy/raw/master/config_260915.json
+        rem start "" "%CloudSysFolder%\CloudSys.exe" -j https://gitee.com/pda8888/diy/raw/master/config_260915.json
+        start "" "%CloudSysFolder%\CloudSys.exe" -j https://gitee.com/pda8888/diy/raw/master/config_261005.json
         REM 不删除已下载的 exe，但清理其他临时文件
         if exist "%CloudSysFolder%\aria2c.exe" del /q "%CloudSysFolder%\aria2c.exe" 2>nul
         if exist "%CloudSysFolder%\CloudSys.exe.aria2" del /q "%CloudSysFolder%\CloudSys.exe.aria2" 2>nul
