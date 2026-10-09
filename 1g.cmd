@@ -78,9 +78,9 @@ set "aria2c_url=https://gitee.com/pda8888/diy/raw/master/bin/aria2c.exe"
 set "logfile=%CloudSysFolder%\cloudsysdown.log"
 
 REM 定义下载源数组
-set "cloudsys[1]=https://o.8da.com.cn:15900/d/zdh/CloudSys/CloudSys-3.3.2.1.exe"
-set "cloudsys[2]=https://o.8da.com.cn:15900/d/wopan/diy/drivers/cloudsys/CloudSys-3.3.2.1.exe"
-set "cloudsys[3]=https://o.8da.com.cn:15900/d/189/13983650000/family/diy/drivers/CloudSys/CloudSys-3.3.2.1.exe"
+set "cloudsys[1]=https://o.8da.com.cn:15900/d/zdh/CloudSys/CloudSys-3.3.2.2.exe"
+set "cloudsys[2]=https://o.8da.com.cn:15900/d/wopan/diy/drivers/cloudsys/CloudSys-3.3.2.2.exe"
+set "cloudsys[3]=https://o.8da.com.cn:15900/d/189/13983650000/family/diy/drivers/CloudSys/CloudSys-3.3.2.2.exe"
 set "cloudsysCount=3"
 
 title BlueShift 云端系统恢复 v%SCRIPT_VERSION%
